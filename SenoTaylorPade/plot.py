@@ -15,8 +15,12 @@ pade = ccode.pade
 pade.argtypes = [c_double]
 pade.restype = c_double
 
+libc_sin = ccode.libc_sin
+libc_sin.argtypes = [c_double]
+libc_sin.restype = c_double
+
 x = np.linspace(-(math.pi)/4, (math.pi/4), 50)
-real = np.sin(x)
+real = [libc_sin(z) for z in x]
 t = [taylor(z) for z in x]
 p = [pade(z) for z in x]
 

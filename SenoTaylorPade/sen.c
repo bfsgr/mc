@@ -1,4 +1,9 @@
 #include <stdio.h>
+#include <math.h>
+
+double libc_sin(double x) {
+    return sin(x);
+}
 
 double taylor(double x){
     static const double K = -1.0/6.0;
