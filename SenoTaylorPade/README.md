@@ -15,3 +15,4 @@ python plot.py
 - matplotlib
 - numpy
 - ctypes
+- gcc
